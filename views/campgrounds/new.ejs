@@ -1,0 +1,57 @@
+    <% layout('layouts/boilerPlate') %> 
+    <div class="row">
+        <h1 class="text-center">New Campground</h1>
+        <div class="col-6 offset-3" >
+            <form action="/campgrounds" method="post" novalidate class="validated-form">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Title</label>
+                    <input class="form-control" type="text" name="campground[title]" id="title" required>
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location</label>
+                    <input class="form-control" type="text" name="campground[location]" id="location" required>
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image Url</label>
+                    <input class="form-control" type="text" name="campground[image]" id="image" required>
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Description</label>
+                    <textarea class="form-control" type="text" name="campground[description]" id="descrition" required></textarea>
+                    <div class="valid-feedback">
+                        looks good!
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="Price">Price</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="text" name="campground[price]" class="form-control" aria-label="Amount (to the nearest dollar)" required>
+                        <span class="input-group-text">.00</span>
+                        <div class="valid-feedback">
+                            looks good!
+                        </div>
+            
+                    </div>
+                    
+                      
+                </div>
+                
+                <div class="mb-3">
+                    <button type="add campground" class="btn btn-success">Add Campground</button>
+                </div>
+                
+            </form>
+            <a href="/campgrounds">All Campgrounds</a>
+        </div>
+    </div>
+
